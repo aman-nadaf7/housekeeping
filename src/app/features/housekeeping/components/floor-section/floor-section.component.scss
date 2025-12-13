@@ -1,0 +1,52 @@
+.floor {
+  margin-bottom: 1.5rem;
+  background-color: #e5edf7; /* light strip behind rooms */
+  //border-radius: 0.75rem;
+  padding: 0.9rem 1.1rem 1rem;
+}
+
+.floor__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 0.89rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.floor__label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.6875rem;
+}
+
+.floor__name {
+  margin-left: 0.25rem;
+  color: #111827;
+  font-weight: 500;
+}
+
+.floor__summary {
+  text-align: right;
+}
+
+.floor__summary-top {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.floor__summary-bottom {
+  margin-top: 0.1rem;
+  font-size: 0.6875rem;
+  color: #6b7280;
+}
+
+/* single horizontal lane of rooms */
+.floor__row {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr)); /* 7 cards per row */
+  gap: 0.75rem;
+}
+
+

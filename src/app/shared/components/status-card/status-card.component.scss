@@ -1,0 +1,71 @@
+$status-clean: #d1fae5;
+$status-dirty: #fee2e2;
+$status-inspect: #e0f2fe;
+$status-out: #e5e7eb;
+
+.status-card {
+  min-width: 7.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0.125rem 0.25rem rgba(15, 23, 42, 0.4);
+}
+
+.status-card.cleaned {
+  background-color: $status-clean;
+  color: #065f46;
+}
+
+.status-card.dirty {
+  background-color: $status-dirty;
+  color: #b91c1c;
+}
+
+.status-card.inspect {
+  background-color: $status-inspect;
+  color: #0369a1;
+}
+
+.status-card.out-of-service {
+  background-color: $status-out;
+  color: #374151;
+}
+
+.status-card__number {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.status-card__type {
+  margin-top: 0.125rem;
+  opacity: 0.7;
+}
+
+.status-card__footer {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status-card__icons {
+  display: inline-flex;
+  gap: 0.25rem;
+}
+
+.dot {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background-color: rgba(15, 23, 42, 0.3);
+}
+
+.status-card__tag .tag {
+  font-size: 0.625rem;
+  padding: 0.125rem 0.375rem;
+  border-radius: 999rem;
+  background-color: rgba(15, 23, 42, 0.15);
+}

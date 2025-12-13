@@ -1,0 +1,24 @@
+<article class="status-card" [class.cleaned]="room.status === 'cleaned'"
+         [class.dirty]="room.status === 'dirty'"
+         [class.inspect]="room.status === 'inspect'"
+         [class.out-of-service]="room.status === 'outOfService'">
+  <div class="status-card__number">{{ room.number }}</div>
+  <div class="status-card__type">{{ room.type }}</div>
+
+  <div class="status-card__footer">
+    <div class="status-card__icons">
+      <!-- replace with <img> or icon fonts from /assets/icons -->
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <div class="status-card__tag">
+      @if (room.tag) {
+        <span class="tag">{{ room.tag }}</span>
+      } @else {
+        <span class="tag tag--empty">&nbsp;</span>
+      }
+    </div>
+  </div>
+</article>

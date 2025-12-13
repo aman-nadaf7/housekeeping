@@ -1,0 +1,56 @@
+$outer-bg: #111827;
+
+.kpi-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.4rem;
+  padding: 0.7rem 0.9rem 0.7rem;
+  border-radius: 0.7rem;
+  background: $outer-bg;
+  box-shadow: 0 0.08rem 0.25rem rgba(0, 0, 0, 0.55);
+  min-height: 5rem; /* same height for all KPI cards */
+}
+
+.kpi-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kpi-card__title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.kpi-card__label {
+  font-size: 0.78rem;
+  opacity: 0.8;
+}
+
+
+.kpi-card__value {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.kpi-card__sub {
+  margin-top: 0.1rem;
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+/* donut that we pass from Occupancy card */
+.kpi-card__donut {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+[kpi-icon] {
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  object-fit: contain;
+}

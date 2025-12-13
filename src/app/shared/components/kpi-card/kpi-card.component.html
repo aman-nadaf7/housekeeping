@@ -1,0 +1,28 @@
+<article class="kpi-card">
+  <header class="kpi-card__header">
+    <div class="kpi-card__title-row">
+      <span class="kpi-card__label">{{ label }}</span>
+
+      <!-- placeholder icon circle; replace with real icon later -->
+       <ng-content select="[kpi-icon]"></ng-content>
+      <!--<span class="kpi-card__icon"><img src="/header/perecentage.png" alt="aura logo" height="31px" width="30px" class="last" class="select-input">
+</span>
+<span class="kpi-card__arrival"><img src="/header/arrival.png" alt="aura logo" height="31px" width="30px" class="last" class="select-input">
+</span><span class="kpi-card__departure"><img src="/header/departure.png" alt="aura logo" height="31px" width="30px" class="last" class="select-input">
+</span><span class="kpi-card__guestreq"><img src="/header/guestreq.png" alt="aura logo" height="31px" width="30px" class="last" class="select-input">
+</span>-->
+      
+    </div>
+  </header>
+
+  <div class="kpi-card__value">
+    {{ value }}
+  </div>
+  
+
+  @if (subLabel) {
+    <div class="kpi-card__sub">
+      {{ subLabel }}
+    </div>
+  }
+</article>
