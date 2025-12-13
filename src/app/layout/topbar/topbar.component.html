@@ -15,83 +15,96 @@
   <!-- Right Actions -->
   <div class="actions">
     <!-- Aura -->
-    <button class="aura-btn">
-      <img src="/header/aura-logo.png" alt="aura logo" height="28px" width="82px">
-    </button>
+    <!--<button class="aura-btn">-->
+      <img src="/header/aura-logo.png" alt="aura logo" height="28" width="82" />
+    <!--</button>-->
 
-    <!-- Chat w/ badge -->
-    <button class="chat-btn">
-      <img src="/header/msg.png" alt="aura logo" height="24px" width="24px">
+    <!-- Chat -->
+    <!--<button class="chat-btn">-->
+ 
+      <img src="/header/msg.png" alt="chat" height="24" width="24" class="chat-btn"  />
       <span class="chat-label">Chat</span>
-      
-    </button>
+    <!--</button>-->
 
     <!-- Notifications -->
-    <button class="icon-btn">
-      <img src="/header/icon.png" alt="aura logo" height="24px" width="24px">
-    </button>
+    <!--<button class="icon-btn">-->
+      <img src="/header/icon.png" alt="notifications" height="24" width="24" />
+    <!--</button>-->
 
     <!-- More/Menu -->
-    <button class="icon-btn">
-       <img src="/header/lasticon.png" alt="aura logo" height="24px" width="24px" class="last">
-    </button>
+    <!--<button class="icon-btn">-->
+      <img
+        src="/header/lasticon.png"
+        alt="menu"
+        height="24"
+        width="24"
+        class="last"
+      />
+    <!--</button>-->
   </div>
 </div>
 
 <!-- PAGE HEADER SECTION -->
- 
 <div class="page-header">
+  <!-- title + tabs -->
+  <div class="page-header__top">
+    <h1 class="page-title">Property Overview</h1>
+  </div>
   
-<h1 class="page-title">Property Overview</h1>
+
+  <!-- filters row -->
   <div class="header-controls">
-    
-    <!-- Tabs -->
-    <div class="view-tabs">
+    <!-- Search -->
+     <div class="view-tabs">
       <button class="tab-btn">Overview</button>
       <button class="tab-btn active">Chart View</button>
     </div>
-
-    <!-- Search -->
     <div class="search-bar">
       <svg viewBox="0 0 24 24">
         <path
           d="M21 21l-6-6m2-5a7 7 0 11-14 
-                0 7 7 0 0114 0z"
+             0 7 7 0 0114 0z"
         ></path>
       </svg>
       <input type="text" placeholder="Search" />
     </div>
 
-    <!-- Date -->
-     
-     
-      <img src="/header/date.png" alt="aura logo" height="31px" width="98px" class="last" class="date-input">
+    <!-- Date: trigger image + Material datepicker -->
+    <div class="date-wrapper">
+  <button class="date-pill" type="button" (click)="picker.open()">
+    {{ selectedDateLabel }}
+  </button>
+
+  <mat-form-field class="date-field" appearance="fill">
+    <input
+      matInput
+      [matDatepicker]="picker"
+      [(ngModel)]="selectedDate"
+      (dateChange)="onDateChange($event.value)"
+      hidden
+    />
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
 
 
-    <!-- Filter -->
-     
-    <img src="/header/filter.png" alt="aura logo" height="31px" width="90px" class="last" class="select-input">
-   
+    <!-- Filter image -->
+    <img
+      src="/header/filter.png"
+      alt="filter"
+      height="31"
+      width="90"
+      class="last"
+    />
 
     <!-- Auto Assign -->
-    <button class="auto-assign-btn">
-      <span>Auto Assign</span>
-      <svg viewBox="0 0 20 20">
-        <path
-          d="M9.049 2.927c.3-.921 1.603-.921 
-                1.902 0l1.07 3.292a1 1 0 
-                00.95.69h3.462c.969 0 
-                1.371 1.24.588 1.81l-2.8 
-                2.034a1 1 0 00-.364 
-                1.118l1.07 3.292c.3.921-.755 
-                1.688-1.54 1.118l-2.8-2.034a1 
-                1 0 00-1.175 0l-2.8 
-                2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 
-                1 0 00-.364-1.118L2.98 
-                8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 
-                1 0 00.951-.69l1.07-3.292z"
-        ></path>
-      </svg>
-    </button>
+    
+      <img
+      src="/header/autoassign.png"
+      alt="filter"
+      height="32"
+      width="95"
+      class="last"
+    />
   </div>
 </div>
