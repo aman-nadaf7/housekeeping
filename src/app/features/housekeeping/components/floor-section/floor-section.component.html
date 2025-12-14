@@ -1,9 +1,10 @@
 <section class="floor">
   <header class="floor__header">
   <div class="floor__title">
-    
+    <span class="floor__arrow"><img src="/header/downarrow.png"></span>
     <span class="floor__label">FLOOR:</span>
     <span class="floor__name">{{ floor.name }}</span>
+   
   </div>
 
   <div class="floor__summary">
@@ -20,9 +21,11 @@
 
 
   <div class="floor__row">
+    
     @for (row of floor.rooms; track $index) {
       @for (room of row; track room.id) {
         <app-room-card [room]="room"></app-room-card>
+        
       }
     }
   </div>
@@ -30,8 +33,10 @@
 
    <header class="floor__header">
   <div class="floor__title">
+    <span class="floor__arrow"><img src="/header/downarrow.png"></span>
     <span class="floor__label">FLOOR:</span>
     <span class="floor__name">{{ floor.name }}</span>
+   
   </div>
 
   <div class="floor__summary">

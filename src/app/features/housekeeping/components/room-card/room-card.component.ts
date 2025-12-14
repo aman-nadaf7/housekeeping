@@ -8,6 +8,8 @@ import { Room } from '../../../../core/services/housekeeping.service';
   standalone: true,
   imports: [CommonModule, StatusCardComponent],
   template: `<app-status-card [room]="room"></app-status-card>`
+  
+
 })
 export class RoomCardComponent {
   @Input() room!: Room;

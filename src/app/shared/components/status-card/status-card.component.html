@@ -1,24 +1,29 @@
+
 <article class="status-card" [class.cleaned]="room.status === 'cleaned'"
          [class.dirty]="room.status === 'dirty'"
          [class.inspect]="room.status === 'inspect'"
          [class.out-of-service]="room.status === 'outOfService'">
+         
+<header class="status-card__header">
+  <div class="status-card__primary">
   <div class="status-card__number">{{ room.number }}</div>
   <div class="status-card__type">{{ room.type }}</div>
-
-  <div class="status-card__footer">
-    <div class="status-card__icons">
-      <!-- replace with <img> or icon fonts from /assets/icons -->
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-
-    <div class="status-card__tag">
-      @if (room.tag) {
-        <span class="tag">{{ room.tag }}</span>
-      } @else {
-        <span class="tag tag--empty">&nbsp;</span>
-      }
-    </div>
   </div>
+
+      <div class="status-card__icons-top">
+      <!-- replace with <img> or icon fonts from /assets/icons -->
+      <img src="/header/1.png" alt="" height="15px" width="15px" />
+      <img src="/header/2.png" alt="" height="15px" width="15px"/>
+      <img src="/header/3.png" alt="" height="15px" width="15px"/>
+    </div>
+</header>
+
+  <footer class="status-card__footer">
+    <div class="status-card__icons-bottom">
+      <!-- replace with <img> or icon fonts from /assets/icons -->
+      <img src="/header/4.png" alt="" height="15px" width="15px" />
+      <img src="/header/5.png" alt="" height="15px" width="15px"/>
+      <img src="/header/DND.png" alt="" height="12px" width="18px"/>
+    </div> 
+  </footer>
 </article>

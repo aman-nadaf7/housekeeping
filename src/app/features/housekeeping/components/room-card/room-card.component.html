@@ -1,0 +1,32 @@
+<article class="room-card" [ngClass]="'room-card--' + room.status">
+  <!-- top row: number + status icons -->
+  <header class="room-card__header">
+    <div class="room-card__primary">
+      <div class="room-card__number">{{ room.number }}</div>
+      <div class="room-card__type">Deluxe</div>
+    </div>
+
+    <!-- top-right icon row (3 icons) -->
+    <div class="room-card__icons-top">
+      <img src="/header/arrival.png" alt="" />
+      <img src="/header/guestreq.png" alt="" />
+      <img src="/header/departure.png" alt="" />
+    </div>
+  </header>
+
+  <!-- bottom row: left icons + right badge -->
+  <footer class="room-card__footer">
+    <div class="room-card__icons-bottom">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <div class="room-card__badge" *ngIf="room.dnd">
+      DND
+    </div>
+    <div class="room-card__badge room-card__badge--mur" *ngIf="room.mur">
+      MUR
+    </div>
+  </footer>
+</article>

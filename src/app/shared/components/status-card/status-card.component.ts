@@ -7,7 +7,7 @@ import { Room } from '../../../core/services/housekeeping.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './status-card.component.html',
-  styleUrls: ['./status-card.component.scss']
+  styleUrls: ['./status-card.component.scss'],
 })
 export class StatusCardComponent {
   @Input() room!: Room;

@@ -1,0 +1,79 @@
+.room-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+  background-color: #d1fae5; /* example; you already have colors per status */
+}
+
+.room-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.room-card__primary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.room-card__number {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.room-card__type {
+  font-size: 0.75rem;
+}
+
+.room-card__icons-top {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.room-card__icons-top img {
+  width: 0.9rem;
+  height: 0.9rem;
+  opacity: 0.7;
+}
+
+/* bottom row */
+
+.room-card__footer {
+  margin-top: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.room-card__icons-bottom {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.dot {
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 999rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* right badges */
+
+.room-card__badge {
+  padding: 0.15rem 0.55rem;
+  border-radius: 999rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.room-card__badge--mur {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
