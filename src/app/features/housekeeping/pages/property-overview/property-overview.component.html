@@ -17,13 +17,26 @@
             
             <!-- multi‑color progress bar -->
             <div class="legend__bar">
-              <div class="legend__segment legend__segment--dirty" style="flex: 20"></div>
-              <div class="legend__segment legend__segment--inprogress" style="flex: 14"></div>
-              <div class="legend__segment legend__segment--cleaned" style="flex: 52"></div>
-              <div class="legend__segment legend__segment--inspect" style="flex: 10"></div>
-              <div class="legend__segment legend__segment--out" style="flex: 3"></div>
-              <div class="legend__segment legend__segment--order" style="flex: 1"></div>
-            </div>
+  <div class="legend__segment legend__segment--dirty" style="flex: 20">
+    <span class="legend__percent">20%</span>
+  </div>
+  <div class="legend__segment legend__segment--inprogress" style="flex: 14">
+    <span class="legend__percent">14%</span>
+  </div>
+  <div class="legend__segment legend__segment--cleaned" style="flex: 52">
+    <span class="legend__percent">52%</span>
+  </div>
+  <div class="legend__segment legend__segment--inspect" style="flex: 10">
+    <span class="legend__percent">10%</span>
+  </div>
+  <div class="legend__segment legend__segment--out" style="flex: 3">
+    <span class="legend__percent">3%</span>
+  </div>
+  <div class="legend__segment legend__segment--order" style="flex: 1">
+    <span class="legend__percent">1%</span>
+  </div>
+</div>
+
 
             <!-- legend labels -->
             <div class="legend__labels">
@@ -71,7 +84,6 @@
                 label="Arrival"
                 [value]="summary.arrival.count.toString()"
                 subLabel="{{ summary.arrival.delta >= 0 ? '+' : '' }}{{ summary.arrival.delta }}% from last week"
-              
                 >
               <img
     kpi-icon

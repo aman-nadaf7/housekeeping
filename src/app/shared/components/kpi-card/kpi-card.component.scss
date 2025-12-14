@@ -38,9 +38,13 @@ $outer-bg: #111827;
 }
 
 .kpi-card__sub {
+  display: flex;
+  justify-content: flex-end;
   margin-top: 0.1rem;
   font-size: 0.7rem;
   opacity: 0.8;
+  
+  
 }
 
 /* donut that we pass from Occupancy card */
@@ -54,3 +58,4 @@ $outer-bg: #111827;
   border-radius: 50%;
   object-fit: contain;
 }
+
