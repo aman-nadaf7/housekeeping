@@ -4,14 +4,14 @@ $status-inspect: #e0f2fe;
 $status-out: #e5e7eb;
 
 .status-card {
-  min-width: 7.5rem;
+  min-width: 9rem;
   padding: 0.5rem 0.75rem;
  // border-radius: 0.5rem;
   font-size: 0.75rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 0.125rem 0.25rem rgba(15, 23, 42, 0.4);
+  //box-shadow: 0 0.125rem 0.25rem rgba(15, 23, 42, 0.4);
 }
 
 .status-card.cleaned {

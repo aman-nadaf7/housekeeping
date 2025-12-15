@@ -1,62 +1,58 @@
 <section class="page">
- 
-
-  <!-- content card behind legend + KPIs (light strip) -->
-   
+  <!-- KPI + legend card -->
   <section class="page__content-card">
-    <!-- KPI + legend row -->
-     
     <section class="page__kpi-bar">
-      
       <div class="page__kpi-inner">
-        
         <!-- LEFT: legend card with progress bar -->
         <div class="page__legend-column">
-          
           <div class="legend">
-            
             <!-- multi‑color progress bar -->
             <div class="legend__bar">
-  <div class="legend__segment legend__segment--dirty" style="flex: 20">
-    <span class="legend__percent">20%</span>
-  </div>
-  <div class="legend__segment legend__segment--inprogress" style="flex: 14">
-    <span class="legend__percent">14%</span>
-  </div>
-  <div class="legend__segment legend__segment--cleaned" style="flex: 52">
-    <span class="legend__percent">52%</span>
-  </div>
-  <div class="legend__segment legend__segment--inspect" style="flex: 10">
-    <span class="legend__percent">10%</span>
-  </div>
-  <div class="legend__segment legend__segment--out" style="flex: 3">
-    <span class="legend__percent">3%</span>
-  </div>
-  <div class="legend__segment legend__segment--order" style="flex: 1">
-    <span class="legend__percent">1%</span>
-  </div>
-</div>
-
+              <div class="legend__segment legend__segment--dirty" style="flex: 20">
+                <span class="legend__percent">20%</span>
+              </div>
+              <div class="legend__segment legend__segment--inprogress" style="flex: 14">
+                <span class="legend__percent">14%</span>
+              </div>
+              <div class="legend__segment legend__segment--cleaned" style="flex: 52">
+                <span class="legend__percent">52%</span>
+              </div>
+              <div class="legend__segment legend__segment--inspect" style="flex: 10">
+                <span class="legend__percent">10%</span>
+              </div>
+              <div class="legend__segment legend__segment--out" style="flex: 3">
+                <span class="legend__percent">3%</span>
+              </div>
+              <div class="legend__segment legend__segment--order" style="flex: 1">
+                <span class="legend__percent">1%</span>
+              </div>
+            </div>
 
             <!-- legend labels -->
             <div class="legend__labels">
               <div class="legend__item">
-                <span class="legend__color legend__color--dirty"></span> Dirty
+                <span class="legend__color legend__color--dirty"></span>
+                Dirty
               </div>
               <div class="legend__item">
-                <span class="legend__color legend__color--inprogress"></span> In Progress
+                <span class="legend__color legend__color--inprogress"></span>
+                In Progress
               </div>
               <div class="legend__item">
-                <span class="legend__color legend__color--inspect"></span> Inspect
+                <span class="legend__color legend__color--inspect"></span>
+                Inspect
               </div>
               <div class="legend__item">
-                <span class="legend__color legend__color--cleaned"></span> Cleaned
+                <span class="legend__color legend__color--cleaned"></span>
+                Cleaned
               </div>
               <div class="legend__item">
-                <span class="legend__color legend__color--out"></span> Out of Service
+                <span class="legend__color legend__color--out"></span>
+                Out of Service
               </div>
               <div class="legend__item">
-                <span class="legend__color legend__color--order"></span> Out of Order
+                <span class="legend__color legend__color--order"></span>
+                Out of Order
               </div>
             </div>
           </div>
@@ -66,16 +62,17 @@
         @if (summary) {
           <div class="page__kpi-column">
             <div class="kpi-strip">
-              <!-- Occupancy as a KPI card with donut -->
+              <!-- Occupancy -->
               <app-kpi-card
                 class="kpi-strip__card"
                 label="Occupancy"
                 [value]="summary.occupancy.current + ' / ' + summary.occupancy.total"
                 subLabel=""
               >
-              
-                <app-donut-chart kpi-icon [percent]="summary.occupancy.percent"></app-donut-chart>
-                
+                <app-donut-chart
+                  kpi-icon
+                  [percent]="summary.occupancy.percent"
+                ></app-donut-chart>
               </app-kpi-card>
 
               <!-- Arrival -->
@@ -85,15 +82,15 @@
                 [value]="summary.arrival.count.toString()"
                 [delta]="summary.arrival.delta"
                 subLabel="{{ summary.arrival.delta >= 0 ? '+' : '' }}{{ summary.arrival.delta }}% from last week"
-                >
-              <img
-    kpi-icon
-    src="/header/arrival.png"
-    alt="arrival"
-    width="30"
-    height="31"
-    class="kpi-icon-img"
-/>
+              >
+                <img
+                  kpi-icon
+                  src="/header/arrival.png"
+                  alt="arrival"
+                  width="30"
+                  height="31"
+                  class="kpi-icon-img"
+                />
               </app-kpi-card>
 
               <!-- Departure -->
@@ -103,17 +100,15 @@
                 [value]="summary.departure.count.toString()"
                 [delta]="summary.departure.delta"
                 subLabel="{{ summary.departure.delta >= 0 ? '+' : '' }}{{ summary.departure.delta }}% from last week"
-              
-                >
+              >
                 <img
-    kpi-icon
-    src="/header/departure.png"
-    alt="departure"
-    width="30"
-    height="31"
-    class="kpi-icon-img"
-/>
-              
+                  kpi-icon
+                  src="/header/departure.png"
+                  alt="departure"
+                  width="30"
+                  height="31"
+                  class="kpi-icon-img"
+                />
               </app-kpi-card>
 
               <!-- Guest Request -->
@@ -123,14 +118,16 @@
                 [value]="summary.guestRequest.count.toString()"
                 [avgService]="summary.guestRequest.avgServiceTimeMinutes"
                 subLabel="{{ summary.guestRequest.avgServiceTimeMinutes }} min Avg. service time"
-              ><img
-    kpi-icon
-    src="/header/guestreq.png"
-    alt="guest request"
-    width="30"
-    height="31"
-    class="kpi-icon-img"
-/></app-kpi-card>
+              >
+                <img
+                  kpi-icon
+                  src="/header/guestreq.png"
+                  alt="guest request"
+                  width="30"
+                  height="31"
+                  class="kpi-icon-img"
+                />
+              </app-kpi-card>
             </div>
           </div>
         }

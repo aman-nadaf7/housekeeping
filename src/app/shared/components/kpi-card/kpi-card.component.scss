@@ -6,7 +6,7 @@ $outer-bg: #111827;
   flex-direction: column;
   justify-content: space-between;
   gap: 0.4rem;
-  padding: 0.7rem 0.9rem 0.7rem;
+  padding: 0.7rem 1.25rem 0.7rem ;
   border-radius: 0.7rem;
   background: $outer-bg;
   box-shadow: 0 0.08rem 0.25rem rgba(0, 0, 0, 0.55);
@@ -27,6 +27,7 @@ $outer-bg: #111827;
 }
 
 .kpi-card__label {
+  padding-bottom: 0.8rem;
   font-size: 0.78rem;
   opacity: 0.8;
 }
@@ -43,7 +44,7 @@ $outer-bg: #111827;
   margin-top: 0.1rem;
   font-size: 0.7rem;
   opacity: 0.8;
-  
+  //padding-right: 0.5rem;   /* <-- add this line (try 0.5–0.75rem) */
   
 }
 
@@ -63,6 +64,8 @@ $outer-bg: #111827;
   display: flex;
   align-items: center;
   gap: 0.35rem;
+    //padding-right: 0.5rem;  /* move footer content a bit left */
+
 }
 
 .kpi-card__pill {
@@ -86,6 +89,7 @@ $outer-bg: #111827;
 .kpi-card__footer-text {
   font-size: 0.7rem;
   opacity: 0.7;
+  
 }
 
 

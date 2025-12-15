@@ -48,7 +48,7 @@ export class HousekeepingService {
             { id: 10, number: '1208', type: 'Deluxe', status: 'dirty', tag: 'DND' }
           ]
         ]
-      }
+      } 
       // add Floor 2, Floor 3 etc.
     ];
     return of(floors);
