@@ -1,11 +1,11 @@
 .sidebar {
-  width: 3.75rem;
-  background-color: #020617;
+  width: 3.89rem;
+  background-color: #1A232E;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 0.75rem 0;
-  gap: 1rem;
+  //align-items: left;
+  //padding: 0.75rem 0;
+  //gap: 1rem;
 }
 
 .sidebar__logo {
@@ -24,9 +24,10 @@
 .sidebar__nav {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0.5rem;
-  margin-top: 0.5rem;
-  flex: 1;
+  margin-top: 0.4rem;
+  flex: 1;  
 }
 
 .sidebar__item {
@@ -34,19 +35,24 @@
   height: 2.25rem;
   border-radius: 0.75rem;
   border: none;
-  background-color: #020617;
+  background-color: #1A232E;
   color: #9ca3af;
   font-size: 1.125rem;
   cursor: pointer;
+  margin: 0;
 }
 
 .sidebar__item--active {
-  background-color: #0f172a;
+  background-color: #1A232E;
   color: #f9fafb;
 }
 
 .sidebar__user {
-  padding-bottom: 0.5rem;
+  margin-top: auto;
+}
+.sidebar__item--user {
+  padding: 0;
+  border-radius: 0.75rem;
 }
 
 .sidebar__avatar {
@@ -56,3 +62,4 @@
   background: url('/assets/images/avatar-placeholder.png') center/cover,
     #1f2937;
 }
+

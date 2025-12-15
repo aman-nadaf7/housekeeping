@@ -1,6 +1,6 @@
 /* COLOR VARIABLES */
-$page-bg: #020617;
-$card-bg: #111827;
+$page-bg: #1A232E;
+$card-bg: #1A232E;
 
 /* MAIN WRAPPER */
 .page {
@@ -8,13 +8,14 @@ $card-bg: #111827;
   flex-direction: column;
   background-color: $page-bg;
   color: #f9fafb;
-  min-height: 100vh;
+  min-height: auto;
+  margin: 0;
 }
 
 /* CONTENT CARD */
 .page__content-card {
   margin-top: 0.75rem;
-  background-color: #050b16;
+  background-color: #1A232E;
   border-radius: 0.9rem;
   box-shadow: 0 0.3rem 0.9rem rgba(0,0,0,0.6);
 }
@@ -39,7 +40,7 @@ $card-bg: #111827;
 
 .legend {
   width: 100%;
-  background-color: $card-bg;
+  background-color: #111827;
   border-radius: 0.7rem;
   padding: 0.4rem 0.75rem 0.55rem;
   box-shadow: 0 0.08rem 0.25rem rgba(0,0,0,0.5);

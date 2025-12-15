@@ -83,6 +83,7 @@
                 class="kpi-strip__card"
                 label="Arrival"
                 [value]="summary.arrival.count.toString()"
+                [delta]="summary.arrival.delta"
                 subLabel="{{ summary.arrival.delta >= 0 ? '+' : '' }}{{ summary.arrival.delta }}% from last week"
                 >
               <img
@@ -100,6 +101,7 @@
                 class="kpi-strip__card"
                 label="Departure"
                 [value]="summary.departure.count.toString()"
+                [delta]="summary.departure.delta"
                 subLabel="{{ summary.departure.delta >= 0 ? '+' : '' }}{{ summary.departure.delta }}% from last week"
               
                 >
@@ -119,6 +121,7 @@
                 class="kpi-strip__card"
                 label="Guest Request"
                 [value]="summary.guestRequest.count.toString()"
+                [avgService]="summary.guestRequest.avgServiceTimeMinutes"
                 subLabel="{{ summary.guestRequest.avgServiceTimeMinutes }} min Avg. service time"
               ><img
     kpi-icon

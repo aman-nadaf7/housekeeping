@@ -59,3 +59,33 @@ $outer-bg: #111827;
   object-fit: contain;
 }
 
+.kpi-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.kpi-card__pill {
+  padding: 0.1rem 0.5rem;
+  border-radius: 999rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.kpi-card__pill--positive {
+  //background-color: #22c55e; /* green */
+  color: #22c55e;
+}
+
+.kpi-card__pill--negative {
+ // background-color: #ef4444; /* red */
+  color: #ef4444;
+}
+
+.kpi-card__footer-text {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+

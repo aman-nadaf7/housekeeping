@@ -3,28 +3,38 @@
     <div class="kpi-card__title-row">
       <span class="kpi-card__label">{{ label }}</span>
 
-      <!-- placeholder icon circle; replace with real icon later -->
-       <ng-content select="[kpi-icon]"></ng-content>
-      <!--<span class="kpi-card__icon"><img src="/header/perecentage.png" alt="aura logo" height="31px" width="30px" class="last" class="select-input">
-</span>
-<span class="kpi-card__arrival"><img src="/header/arrival.png" alt="aura logo" height="31px" width="30px" class="last" class="select-input">
-</span><span class="kpi-card__departure"><img src="/header/departure.png" alt="aura logo" height="31px" width="30px" class="last" class="select-input">
-</span><span class="kpi-card__guestreq"><img src="/header/guestreq.png" alt="aura logo" height="31px" width="30px" class="last" class="select-input">
-</span>-->
-      
+      <!-- icon slot -->
+      <ng-content select="[kpi-icon]"></ng-content>
     </div>
   </header>
 
   <div class="kpi-card__value">
     {{ value }}
   </div>
-  
 
   @if (subLabel) {
-    <div class="kpi-card__sub">
-      {{ subLabel }}
+    <div class="kpi-card__sub kpi-card__footer">
+      <!-- pill + text in one line -->
+      @if (deltaText) {
+        <span
+          class="kpi-card__pill"
+          [ngClass]="{
+            'kpi-card__pill--positive': delta && delta > 0,
+            'kpi-card__pill--negative': delta && delta < 0
+          }"
+        >
+          {{ deltaText }}
+        </span>
+        <span class="kpi-card__footer-text">From last week</span>
+      } @else {
+        <!-- Guest Request (time) -->
+        <span class="kpi-card__pill kpi-card__pill--positive">
+          {{ subLabel.split(' ')[0] }}
+        </span>
+        <span class="kpi-card__footer-text">
+          {{ subLabel.split(' ').slice(1).join(' ') }}
+        </span>
+      }
     </div>
   }
-
-  
 </article>
